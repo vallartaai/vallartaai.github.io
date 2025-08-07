@@ -246,40 +246,5 @@
       </div>
     </div>
   </section>
-  <section class="contact-section">
-    <div class="contact-title">¿EN QUÉ PODEMOS AYUDARTE?</div>
-    <form class="contact-form" id="contactForm" action="https://formspree.io/f/mayvgrqg" method="POST">
-      <div class="form-group">
-        <label class="form-label" for="nombre">Nombre de contacto</label>
-        <input class="form-input" type="text" id="nombre" name="nombre" required>
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="empresa">Nombre de la empresa</label>
-        <input class="form-input" type="text" id="empresa" name="empresa" required>
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="email">Email</label>
-        <input class="form-input" type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="pais">País</label>
-        <input class="form-input" type="text" id="pais" name="pais" required>
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="mensaje">Mensaje</label>
-        <textarea class="form-textarea" id="mensaje" name="mensaje" required></textarea>
-      </div>
-      <button class="form-submit" type="submit">Enviar</button>
-      <div class="form-success" id="formSuccess" style="display:none;">¡Gracias! Tu mensaje ha sido enviado.</div>
-    </form>
-  </section>
-  <script>
-    // Mostrar mensaje de éxito sin recargar
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      setTimeout(function() {
-        document.getElementById('formSuccess').style.display = 'block';
-      }, 500);
-    });
-  </script>
 </body>
 </html>
