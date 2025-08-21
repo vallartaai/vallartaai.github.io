@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestros Servicios - Vallarta Software</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <section class="services-section">
+    <div class="services-title">Nuestros Servicios</div>
+    <div class="services-list">
+      <div class="service-card">
+        <div class="service-title">Agentes de Inteligencia Artificial</div>
+        <div class="service-desc">Automatización y soluciones inteligentes para potenciar tu empresa.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Ciberseguridad</div>
+        <div class="service-desc">Protege tus activos digitales con estrategias y tecnologías avanzadas.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Blockchain</div>
+        <div class="service-desc">Integración de tecnologías blockchain para procesos seguros y transparentes.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Cloud</div>
+        <div class="service-desc">Migración, modernización y gestión de soluciones en la nube.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Servicios de Gestión IT</div>
+        <div class="service-desc">Administración y optimización de infraestructura y operaciones IT.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Auditoría & Consultoría IT</div>
+        <div class="service-desc">Diagnóstico, auditoría y asesoría para maximizar el valor de tu tecnología.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Ingeniería de Datos & Analítica</div>
+        <div class="service-desc">Transforma datos en decisiones inteligentes y accionables.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Integración y Modernización de Aplicaciones</div>
+        <div class="service-desc">Conecta y moderniza tus sistemas para mayor eficiencia y agilidad.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Desarrollo de Software</div>
+        <div class="service-desc">Soluciones a medida, modernas y escalables para tu negocio.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Desarrollo de Apps Móviles</div>
+        <div class="service-desc">Aplicaciones móviles innovadoras para iOS y Android.</div>
+      </div>
+    </div>
+  </section>
+  <div id="footer-placeholder"></div>
+
+  <script>
+    async function includeHTML() {
+      let headerPlaceholder = document.getElementById("header-placeholder");
+      if (headerPlaceholder) {
+        let response = await fetch("header.html");
+        headerPlaceholder.innerHTML = await response.text();
+      }
+
+      let footerPlaceholder = document.getElementById("footer-placeholder");
+      if (footerPlaceholder) {
+        let response = await fetch("footer.html");
+        footerPlaceholder.innerHTML = await response.text();
+      }
+    }
+    document.addEventListener('DOMContentLoaded', includeHTML);
+  </script>
+</body>
+</html>
