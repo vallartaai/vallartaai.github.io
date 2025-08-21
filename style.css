@@ -1,6 +1,6 @@
 :root {
   --header-height: 10px;
-  --footer-height: 10px; /* Further reduced footer height */
+  --footer-height: 50px; /* Further adjusted footer height for a single line */
 }
 body {
   margin: 0;
@@ -13,14 +13,8 @@ body {
   flex-direction: column;
   padding-top: var(--header-height);
   padding-bottom: var(--footer-height);
-  /* Removed align-items: center; */
 }
-.container {
-  max-width: 1400px; /* Increased max-width */
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  width: 100%; /* Ensure container takes full width within its parent */
-}
+
 header {
   background: #ffffff;
   padding: 1.5rem 0; /* Removed horizontal padding from header */
@@ -30,6 +24,38 @@ header {
   top: 0;
   z-index: 1000;
   width: 100%;
+}
+
+footer {
+  background: #f8f8f8;
+  color: #777;
+  padding: 0.2rem 1.5rem; /* Reverted padding */
+  border-top: 1px solid #eee;
+  font-size: 0.95rem;
+  position: sticky;
+  bottom: 0;
+  z-index: 1000;
+  max-width: 1400px; /* Align with main content sections */
+  margin: 0 auto; /* Center the footer content */
+  text-align: center; /* Reverted text-align property */
+}
+footer p {
+  margin: 0; /* Remove default paragraph margin */
+  line-height: 2.0; /* Further reduce line height for closer lines */
+}
+footer a {
+  color: #0D4151;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1400px; /* Increased max-width */
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%; /* Ensure container takes full width within its parent */
 }
 .navbar {
   display: flex;
@@ -192,30 +218,6 @@ header {
   margin-bottom: 2.5rem;
   font-weight: 700;
   letter-spacing: 1px;
-}
-
-footer {
-  background: #f8f8f8;
-  color: #777;
-  text-align: center;
-  padding: 0.5rem 1.5rem; /* Reduced vertical padding */
-  border-top: 1px solid #eee;
-  font-size: 0.95rem;
-  position: sticky;
-  bottom: 0;
-  z-index: 1000;
-  width: 100%;
-}
-footer p {
-  margin: 0; /* Remove default paragraph margin */
-  line-height: 1.2; /* Reduce line height for closer lines */
-}
-footer a {
-  color: #0056b3;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
