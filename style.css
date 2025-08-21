@@ -29,6 +29,7 @@ header {
 footer {
   background: #f8f8f8;
   color: #777;
+  text-align: center; /* Center text within the footer */
   padding: 0.2rem 1.5rem; /* Reverted padding */
   border-top: 1px solid #eee;
   font-size: 0.95rem;
@@ -37,7 +38,6 @@ footer {
   z-index: 1000;
   max-width: 1400px; /* Align with main content sections */
   margin: 0 auto; /* Center the footer content */
-  text-align: center; /* Reverted text-align property */
 }
 footer p {
   margin: 0; /* Remove default paragraph margin */
