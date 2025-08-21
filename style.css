@@ -1,6 +1,6 @@
 :root {
-  --header-height: 75px;
-  --footer-height: 40px; /* Further reduced footer height */
+  --header-height: 10px;
+  --footer-height: 10px; /* Further reduced footer height */
 }
 body {
   margin: 0;
