@@ -121,7 +121,7 @@ header {
 
 .services-section {
   flex-grow: 1;
-  background: #ffffff;
+  background: #fdfdfd;
   padding: 4rem 1.5rem;
   text-align: center;
   border-bottom: 1px solid #eee;
@@ -177,7 +177,7 @@ header {
 
 .about-section {
   flex-grow: 1;
-  background: #ffffff;
+  background: #fdfdfd;
   padding: 4rem 1.5rem;
   text-align: center;
   border-bottom: 1px solid #eee;
