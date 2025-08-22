@@ -41,7 +41,7 @@ footer {
 }
 footer p {
   margin: 0; /* Remove default paragraph margin */
-  line-height: 2.0; /* Further reduce line height for closer lines */
+  line-height: 2.0; /* Reverted line height to 1.0 */
 }
 footer a {
   color: #0D4151;
@@ -200,7 +200,6 @@ footer a:hover {
   color: #555;
   line-height: 1.7;
 }
-
 .about-section {
   flex-grow: 1;
   background: #fdfdfd;
@@ -211,6 +210,15 @@ footer a:hover {
   max-width: 1400px; /* Limit content width */
   margin: 0 auto; /* Center content */
 }
+.about-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: center; /* Center cards when there's space */
+  gap: 2rem; /* Space between cards */
+  max-width: 1200px; /* Max width for the container of cards */
+  margin: 0 auto; /* Center the container of cards */
+  padding-top: 2rem; /* Add some space from the title */
+}
 .about-title {
   font-family: 'Open Sans', sans-serif;
   font-size: 2.8rem;
@@ -218,6 +226,53 @@ footer a:hover {
   margin-bottom: 2.5rem;
   font-weight: 700;
   letter-spacing: 1px;
+}
+.vision-card {
+  background: #fdfdfd; /* Slightly off-white for cards */
+  border-radius: 1rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08); /* Soft shadow */
+  padding: 2.5rem 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e0e0e0; /* Subtle border */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 48%; /* Each card takes roughly half the width with a gap */
+  min-height: 25vh; /* Adjusted to be less tall */
+  justify-content: center;
+}
+.vision-card:hover {
+  transform: translateY(-0.7rem);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+  border-color: #0D4151; /* Accent color on hover */
+}
+.vision-card h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0D4151;
+  margin-bottom: 1.5rem;
+}
+.vision-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  max-width: 600px; /* Limit text width within the card */
+}
+.vision-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.8rem;
+  color: #0D4151;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.vision-desc {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
 }
 
 @media (max-width: 768px) {
@@ -242,5 +297,12 @@ footer a:hover {
   }
   .service-card {
     padding: 2rem 1.5rem;
+  }
+  .about-cards-container {
+    flex-direction: column; /* Stack cards vertically on small screens */
+    gap: 1.5rem;
+  }
+  .vision-card {
+    width: 90%; /* Take more width on small screens */
   }
 }
